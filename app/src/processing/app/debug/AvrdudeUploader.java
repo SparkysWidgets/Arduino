@@ -87,7 +87,8 @@ public class AvrdudeUploader extends Uploader  {
     // sketch.
     if (boardPreferences.get("bootloader.path") != null &&
         (boardPreferences.get("bootloader.path").equals("caterina") ||
-         boardPreferences.get("bootloader.path").equals("caterina-LilyPadUSB"))) {
+         boardPreferences.get("bootloader.path").equals("caterina-LilyPadUSB") ||
+         boardPreferences.get("bootloader.path").equals("caterina-LeoPhi"))) {
       String caterinaUploadPort = null;
       try {
         // Toggle 1200 bps on selected serial port to force board reset.
