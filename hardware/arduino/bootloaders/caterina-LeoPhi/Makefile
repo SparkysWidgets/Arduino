@@ -50,6 +50,8 @@
 # reuse of this VID by others is forbidden by USB-IF
 # official Arduino LLC VID
 # VID = 0x2341
+# VID for OpenMoko (Usage allowed by Sparky's Widgets)
+VID = 0x1D50
 
 
 # USB product ID (PID)
@@ -59,6 +61,8 @@
 # PID = 0x0037
 # official Esplora PID
 # PID = 0x003C
+# PID given to LeoPhi by OpenMoko 0x6016 may need to drop leading 60 byte
+PID = 0x6016
 
 # MCU name
 MCU = atmega32u4
@@ -126,8 +130,8 @@ TARGET = Caterina
 OBJDIR = .
 
 
-# Path to the LUFA library
-LUFA_PATH = ../../../../../../LUFA/LUFA-111009
+# Path to the LUFA library "adjusted Lufa path to reside inside bootloader folder"
+LUFA_PATH = LUFA-111009
 
 
 # LUFA library compile-time options and predefined tokens
