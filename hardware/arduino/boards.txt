@@ -209,6 +209,28 @@ micro.build.variant=micro
 
 ##############################################################
 
+leophi.name=Leophi
+leophi.upload.protocol=avr109
+leophi.upload.maximum_size=28672
+leophi.upload.speed=57600
+leophi.upload.disable_flushing=true
+leophi.bootloader.low_fuses=0xff
+leophi.bootloader.high_fuses=0xd8
+leophi.bootloader.extended_fuses=0xcb
+leophi.bootloader.path=caterina-LeoPhi
+leophi.bootloader.file=Caterina-LeophiV2.hex
+leophi.bootloader.unlock_bits=0x3F
+leophi.bootloader.lock_bits=0x2F
+leophi.build.mcu=atmega32u4
+leophi.build.f_cpu=16000000L
+leophi.build.vid=0x1D50
+leophi.build.pid=0x6016
+leophi.build.core=arduino
+leophi.build.variant=leophi
+
+
+##############################################################
+
 mini328.name=Arduino Mini w/ ATmega328
 
 mini328.upload.protocol=arduino
