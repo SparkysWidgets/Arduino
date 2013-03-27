@@ -66,14 +66,14 @@
 		
 		#define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 		#if DEVICE_PID == 0x0016  //LeoPhi Uses an SMD505 LED so polarity is reversed, and dif pins
-			#define LED_SETUP()		DDRB |= (1<<4); DDRB |= (1<<5); DDRB |= (1<<6);
-			#define L_LED_OFF()		PORTB &= ~(1<<4)
-			#define L_LED_ON()		PORTB |= (1<<4)
-			#define L_LED_TOGGLE()	PORTB ^= (1<<4)
-			#define TX_LED_OFF()	PORTB &= ~(1<<5)
-			#define TX_LED_ON()		PORTB |= (1<<5)
-			#define RX_LED_OFF()	PORTB &= ~(1<<6)
-			#define RX_LED_ON()		PORTB |= (1<<6)
+			#define LED_SETUP()		DDRB |= (1<<7); DDRB |= (1<<5); DDRB |= (1<<6);
+			#define L_LED_OFF()		PORTB |= ~(1<<7)
+			#define L_LED_ON()		PORTB &= (1<<7)
+			#define L_LED_TOGGLE()	PORTB ^= (1<<7)
+			#define TX_LED_OFF()	PORTB |= ~(1<<5)
+			#define TX_LED_ON()		PORTB &= (1<<5)
+			#define RX_LED_OFF()	PORTB |= ~(1<<6)
+			#define RX_LED_ON()		PORTB &= (1<<6)
 		#elif DEVICE_PID == 0x0037	// polarity of the RX and TX LEDs is reversed on the Micro
 			#define TX_LED_OFF()	PORTD &= ~(1<<5)
 			#define TX_LED_ON()		PORTD |= (1<<5)

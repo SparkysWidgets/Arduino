@@ -31,8 +31,8 @@
 #undef TX_RX_LED_INIT
 
 //LeoPhi is similar to the Micro with reversed POL LEDs but on a single port (B)
-#define TXLED0			PORTB &= ~(1<<5)
-#define TXLED1			PORTB |= (1<<5)
-#define RXLED0			PORTB &= ~(1<<6)
-#define RXLED1			PORTB |= (1<<6)
+#define TXLED0			PORTB |= ~(1<<5)
+#define TXLED1			PORTB &= (1<<5)
+#define RXLED0			PORTB |= ~(1<<6)
+#define RXLED1			PORTB &= (1<<6)
 #define TX_RX_LED_INIT	DDRB |= (1<<5), DDRB |= (1<<6), TXLED0, RXLED0

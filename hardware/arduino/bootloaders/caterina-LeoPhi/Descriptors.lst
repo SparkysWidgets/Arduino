@@ -532,17 +532,17 @@
  257               		.file 6 "Descriptors.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Descriptors.c
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:2      *ABS*:000000000000003e __SP_H__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:3      *ABS*:000000000000003d __SP_L__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:4      *ABS*:000000000000003f __SREG__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:5      *ABS*:0000000000000000 __tmp_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:6      *ABS*:0000000000000001 __zero_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:13     .text.CALLBACK_USB_GetDescriptor:0000000000000000 CALLBACK_USB_GetDescriptor
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:175    .rodata:0000000000000042 ConfigurationDescriptor
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:236    .rodata:0000000000000080 DeviceDescriptor
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:168    .rodata:000000000000003e LanguageString
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:144    .rodata:000000000000001a ProductString
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccUrmbHk.s:125    .rodata:0000000000000000 ManufNameString
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:13     .text.CALLBACK_USB_GetDescriptor:0000000000000000 CALLBACK_USB_GetDescriptor
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:175    .rodata:0000000000000042 ConfigurationDescriptor
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:236    .rodata:0000000000000080 DeviceDescriptor
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:168    .rodata:000000000000003e LanguageString
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:144    .rodata:000000000000001a ProductString
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccoWNGIE.s:125    .rodata:0000000000000000 ManufNameString
 
 UNDEFINED SYMBOLS
 __do_copy_data

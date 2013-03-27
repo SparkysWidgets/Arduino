@@ -77,19 +77,19 @@
   43               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Events.c
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:2      *ABS*:000000000000003e __SP_H__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:3      *ABS*:000000000000003d __SP_L__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:4      *ABS*:000000000000003f __SREG__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:5      *ABS*:0000000000000000 __tmp_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:6      *ABS*:0000000000000001 __zero_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:13     .text.USB_Event_Stub:0000000000000000 USB_Event_Stub
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_Disconnect
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_ControlRequest
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_ConfigurationChanged
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_Suspend
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_WakeUp
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_Reset
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_StartOfFrame
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc69c8zL.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_Connect
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:13     .text.USB_Event_Stub:0000000000000000 USB_Event_Stub
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_Disconnect
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_ControlRequest
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_ConfigurationChanged
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_Suspend
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_WakeUp
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_Reset
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_StartOfFrame
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cciCYFg7.s:13     .text.USB_Event_Stub:0000000000000000 EVENT_USB_Device_Connect
 
 NO UNDEFINED SYMBOLS

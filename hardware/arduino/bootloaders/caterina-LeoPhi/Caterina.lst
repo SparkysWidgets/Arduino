@@ -4851,31 +4851,31 @@
  1717               		.file 11 "/usr/local/Cellar/avr-gcc/4.7.2/lib/gcc/avr/4.7.2/../../../../avr/include/avr/eeprom.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Caterina.c
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:2      *ABS*:000000000000003e __SP_H__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:3      *ABS*:000000000000003d __SP_L__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:4      *ABS*:000000000000003f __SREG__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:5      *ABS*:0000000000000000 __tmp_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:6      *ABS*:0000000000000001 __zero_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:12     .text.FetchNextCommandByte:0000000000000000 FetchNextCommandByte
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:84     .text.WriteNextResponseByte:0000000000000000 WriteNextResponseByte
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:1690   .bss:0000000000000004 TxLEDPulse
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:161    .text.StartSketch:0000000000000000 StartSketch
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:207    .text.LEDPulse:0000000000000000 LEDPulse
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:12     .text.FetchNextCommandByte:0000000000000000 FetchNextCommandByte
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:84     .text.WriteNextResponseByte:0000000000000000 WriteNextResponseByte
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:1690   .bss:0000000000000004 TxLEDPulse
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:161    .text.StartSketch:0000000000000000 StartSketch
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:207    .text.LEDPulse:0000000000000000 LEDPulse
                             *COM*:0000000000000002 LLEDPulse
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:252    .text.SetupHardware:0000000000000000 SetupHardware
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:334    .text.__vector_17:0000000000000000 __vector_17
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:1685   .bss:0000000000000002 RxLEDPulse
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:1680   .bss:0000000000000000 Timeout
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:447    .text.EVENT_USB_Device_ConfigurationChanged:0000000000000000 EVENT_USB_Device_ConfigurationChanged
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:490    .text.EVENT_USB_Device_ControlRequest:0000000000000000 EVENT_USB_Device_ControlRequest
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:1699   .data:0000000000000003 LineEncoding
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:575    .text.CDC_Task:0000000000000000 CDC_Task
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:252    .text.SetupHardware:0000000000000000 SetupHardware
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:334    .text.__vector_17:0000000000000000 __vector_17
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:1685   .bss:0000000000000002 RxLEDPulse
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:1680   .bss:0000000000000000 Timeout
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:447    .text.EVENT_USB_Device_ConfigurationChanged:0000000000000000 EVENT_USB_Device_ConfigurationChanged
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:490    .text.EVENT_USB_Device_ControlRequest:0000000000000000 EVENT_USB_Device_ControlRequest
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:1699   .data:0000000000000003 LineEncoding
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:575    .text.CDC_Task:0000000000000000 CDC_Task
                              .bss:0000000000000006 CurrAddress
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:1517   .text.startup.main:0000000000000000 main
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:1674   .data:0000000000000000 bootKey
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:1695   .data:0000000000000002 RunBootloader
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:1668   .rodata:0000000000000000 bootKeyPtr
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccFAVmtV.s:570    .rodata.str1.1:0000000000000000 .LC0
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:1517   .text.startup.main:0000000000000000 main
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:1674   .data:0000000000000000 bootKey
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:1695   .data:0000000000000002 RunBootloader
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:1668   .rodata:0000000000000000 bootKeyPtr
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cct3XVae.s:570    .rodata.str1.1:0000000000000000 .LC0
 
 UNDEFINED SYMBOLS
 USB_Init

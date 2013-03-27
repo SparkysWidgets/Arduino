@@ -10,10 +10,10 @@
   10               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Host_AVR8.c
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccefe16S.s:2      *ABS*:000000000000003e __SP_H__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccefe16S.s:3      *ABS*:000000000000003d __SP_L__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccefe16S.s:4      *ABS*:000000000000003f __SREG__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccefe16S.s:5      *ABS*:0000000000000000 __tmp_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccefe16S.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cci2N5su.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cci2N5su.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cci2N5su.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cci2N5su.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cci2N5su.s:6      *ABS*:0000000000000001 __zero_reg__
 
 NO UNDEFINED SYMBOLS

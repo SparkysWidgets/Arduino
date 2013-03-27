@@ -1933,14 +1933,14 @@
  455               		.file 9 "LUFA-111009/LUFA/Drivers/USB/Core/AVR8/../AVR8/../AVR8/../DeviceStandardReq.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 USBInterrupt_AVR8.c
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccKhjaCa.s:2      *ABS*:000000000000003e __SP_H__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccKhjaCa.s:3      *ABS*:000000000000003d __SP_L__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccKhjaCa.s:4      *ABS*:000000000000003f __SREG__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccKhjaCa.s:5      *ABS*:0000000000000000 __tmp_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccKhjaCa.s:6      *ABS*:0000000000000001 __zero_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccKhjaCa.s:13     .text.USB_INT_DisableAllInterrupts:0000000000000000 USB_INT_DisableAllInterrupts
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccKhjaCa.s:37     .text.USB_INT_ClearAllInterrupts:0000000000000000 USB_INT_ClearAllInterrupts
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccKhjaCa.s:56     .text.__vector_10:0000000000000000 __vector_10
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccmfWvi7.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccmfWvi7.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccmfWvi7.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccmfWvi7.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccmfWvi7.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccmfWvi7.s:13     .text.USB_INT_DisableAllInterrupts:0000000000000000 USB_INT_DisableAllInterrupts
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccmfWvi7.s:37     .text.USB_INT_ClearAllInterrupts:0000000000000000 USB_INT_ClearAllInterrupts
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccmfWvi7.s:56     .text.__vector_10:0000000000000000 __vector_10
 
 UNDEFINED SYMBOLS
 EVENT_USB_Device_Connect

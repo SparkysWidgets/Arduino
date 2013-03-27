@@ -1578,14 +1578,14 @@
  277               		.file 9 "LUFA-111009/LUFA/Drivers/USB/Core/AVR8/../AVR8/../USBTask.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 USBController_AVR8.c
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccEvOyVJ.s:2      *ABS*:000000000000003e __SP_H__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccEvOyVJ.s:3      *ABS*:000000000000003d __SP_L__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccEvOyVJ.s:4      *ABS*:000000000000003f __SREG__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccEvOyVJ.s:5      *ABS*:0000000000000000 __tmp_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccEvOyVJ.s:6      *ABS*:0000000000000001 __zero_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccEvOyVJ.s:13     .text.USB_Disable:0000000000000000 USB_Disable
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccEvOyVJ.s:82     .text.USB_ResetInterface:0000000000000000 USB_ResetInterface
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccEvOyVJ.s:242    .text.USB_Init:0000000000000000 USB_Init
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccrpUxVi.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccrpUxVi.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccrpUxVi.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccrpUxVi.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccrpUxVi.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccrpUxVi.s:13     .text.USB_Disable:0000000000000000 USB_Disable
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccrpUxVi.s:82     .text.USB_ResetInterface:0000000000000000 USB_ResetInterface
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccrpUxVi.s:242    .text.USB_Init:0000000000000000 USB_Init
 
 UNDEFINED SYMBOLS
 USB_INT_DisableAllInterrupts

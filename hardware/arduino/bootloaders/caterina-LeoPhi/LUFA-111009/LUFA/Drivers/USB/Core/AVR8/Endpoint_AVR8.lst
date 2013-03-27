@@ -1242,15 +1242,15 @@
  313               		.file 7 "LUFA-111009/LUFA/Drivers/USB/Core/AVR8/../AVR8/../USBTask.h"
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 Endpoint_AVR8.c
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccXlhaxH.s:2      *ABS*:000000000000003e __SP_H__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccXlhaxH.s:3      *ABS*:000000000000003d __SP_L__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccXlhaxH.s:4      *ABS*:000000000000003f __SREG__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccXlhaxH.s:5      *ABS*:0000000000000000 __tmp_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccXlhaxH.s:6      *ABS*:0000000000000001 __zero_reg__
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccXlhaxH.s:13     .text.Endpoint_ConfigureEndpoint_Prv:0000000000000000 Endpoint_ConfigureEndpoint_Prv
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccXlhaxH.s:66     .text.Endpoint_ClearEndpoints:0000000000000000 Endpoint_ClearEndpoints
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccXlhaxH.s:117    .text.Endpoint_ClearStatusStage:0000000000000000 Endpoint_ClearStatusStage
-/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//ccXlhaxH.s:187    .text.Endpoint_WaitUntilReady:0000000000000000 Endpoint_WaitUntilReady
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc82b17D.s:2      *ABS*:000000000000003e __SP_H__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc82b17D.s:3      *ABS*:000000000000003d __SP_L__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc82b17D.s:4      *ABS*:000000000000003f __SREG__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc82b17D.s:5      *ABS*:0000000000000000 __tmp_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc82b17D.s:6      *ABS*:0000000000000001 __zero_reg__
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc82b17D.s:13     .text.Endpoint_ConfigureEndpoint_Prv:0000000000000000 Endpoint_ConfigureEndpoint_Prv
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc82b17D.s:66     .text.Endpoint_ClearEndpoints:0000000000000000 Endpoint_ClearEndpoints
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc82b17D.s:117    .text.Endpoint_ClearStatusStage:0000000000000000 Endpoint_ClearStatusStage
+/var/folders/x1/cjzxvd8x7ml9vy0pw9cqysnr0000gp/T//cc82b17D.s:187    .text.Endpoint_WaitUntilReady:0000000000000000 Endpoint_WaitUntilReady
 
 UNDEFINED SYMBOLS
 USB_ControlRequest
