@@ -1,9 +1,37 @@
 
+ARDUINO 1.0.5 - 2013.05.15
+
+[core]
+
+* [avr] malloc bug: backported avr-libc 1.8.0 implementation
+* [avr] removed deprecated interrupt handlers causing compiler issues 
+  with newer avr-gcc.
+* [avr] added c_str() method to String
+* [avr] Stream "_timeout" field and related methods are now protected
+
+[libraries]
+
+* Upgrades to WiFi library
+* Fixed a bunch of examples
+* Added Arduino Robot libraries
+* Added TFT display library
+
+[firmwares]
+
+* Upgrades to WiFi firmwares
+
+[ide]
+
+* Backport from 1.5: install Library from .zip file or folder
+* Updated windows drivers
+* Added Windows installer
+
 ARDUINO 1.0.4 - 2013.03.11
 
 [core]
 
 * Fixed malloc bug (Paul Stoffregen)
+* Added INT6 support for Leonardo (Federico Vanzati)
 
 [libraries]
 
