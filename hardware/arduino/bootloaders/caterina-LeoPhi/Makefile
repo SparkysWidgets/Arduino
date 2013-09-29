@@ -62,7 +62,7 @@ VID = 0x1D50
 # official Esplora PID
 # PID = 0x003C
 # PID given to LeoPhi by OpenMoko 0x6016 may need to drop leading 60 byte
-PID = 0x6016
+PID = 0x0016
 
 # MCU name
 MCU = atmega32u4
