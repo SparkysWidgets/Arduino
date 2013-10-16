@@ -31,6 +31,10 @@
     <include name="app/lib/ant-launcher.jar" />
   </fileset>
 
+<target name="compile">
+  <javac target="1.5" source="1.5"></javac>
+</target>
+
   <target name="build" description="Build Arduino.">
     <antcall target="${platform}-build" />
   </target>
