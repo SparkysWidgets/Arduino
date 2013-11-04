@@ -131,7 +131,7 @@ OBJDIR = .
 
 
 # Path to the LUFA library "adjusted Lufa path to reside inside bootloader folder"
-LUFA_PATH = LUFA-111009
+LUFA_PATH = ../../../../../../LUFA-111009
 
 
 # LUFA library compile-time options and predefined tokens
