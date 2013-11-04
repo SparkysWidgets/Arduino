@@ -88,6 +88,7 @@ public class AvrdudeUploader extends Uploader  {
     if (boardPreferences.get("bootloader.path") != null &&
         (boardPreferences.get("bootloader.path").equals("caterina") ||
          boardPreferences.get("bootloader.path").equals("caterina-LeoPhi") ||
+         boardPreferences.get("bootloader.path").equals("caterina-LeoEc") ||
          boardPreferences.get("bootloader.path").equals("caterina-Arduino_Robot") ||
          boardPreferences.get("bootloader.path").equals("caterina-LilyPadUSB"))) {
       String caterinaUploadPort = null;
@@ -185,6 +186,7 @@ public class AvrdudeUploader extends Uploader  {
     if (true == avrdudeResult && boardPreferences.get("bootloader.path") != null &&
         (boardPreferences.get("bootloader.path").equals("caterina") ||
          boardPreferences.get("bootloader.path").equals("caterina-LeoPhi") ||
+         boardPreferences.get("bootloader.path").equals("caterina-LeoEc") ||
          boardPreferences.get("bootloader.path").equals("caterina-Arduino_Robot") ||
          boardPreferences.get("bootloader.path").equals("caterina-LilyPadUSB"))) {
       try {
