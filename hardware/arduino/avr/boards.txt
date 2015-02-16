@@ -4,6 +4,74 @@ menu.cpu=Processor
 
 ##############################################################
 
+leophi.name=Leophi
+leophi.vid.0=0x1D50
+leophi.pid.0=0x6016
+leophi.vid.1=0x1D50
+leophi.pid.1=0x8016
+leophi.upload.tool=avrdude
+leophi.upload.protocol=avr109
+leophi.upload.maximum_size=28672
+leophi.upload.maximum_data_size=2560
+leophi.upload.speed=57600
+leophi.upload.disable_flushing=true
+leophi.upload.use_1200bps_touch=true
+leophi.upload.wait_for_upload_port=true
+
+leophi.bootloader.tool=avrdude
+leophi.bootloader.low_fuses=0xff
+leophi.bootloader.high_fuses=0xd8
+leophi.bootloader.extended_fuses=0xcb
+leophi.bootloader.file=caterina-LeoPhi/Caterina-LeoPhi.hex
+leophi.bootloader.unlock_bits=0x3F
+leophi.bootloader.lock_bits=0x2F
+
+leophi.build.mcu=atmega32u4
+leophi.build.f_cpu=16000000L
+leophi.build.vid=0x1D50
+leophi.build.pid=0x8016
+leophi.build.usb_product="LeoPhi USB pH"
+leophi.build.board=AVR_LEOPHI
+leophi.build.core=arduino
+leophi.build.variant=leophi
+leophi.build.extra_flags={build.usb_flags}
+
+##############################################################
+
+leophi.name=Leoec
+leophi.vid.0=0x0DA0
+leophi.pid.0=0x6017
+leophi.vid.1=0x0DA0
+leophi.pid.1=0x8017
+leophi.upload.tool=avrdude
+leophi.upload.protocol=avr109
+leophi.upload.maximum_size=28672
+leophi.upload.maximum_data_size=2560
+leophi.upload.speed=57600
+leophi.upload.disable_flushing=true
+leophi.upload.use_1200bps_touch=true
+leophi.upload.wait_for_upload_port=true
+
+leophi.bootloader.tool=avrdude
+leophi.bootloader.low_fuses=0xff
+leophi.bootloader.high_fuses=0xd8
+leophi.bootloader.extended_fuses=0xcb
+leophi.bootloader.file=caterina-LeoEc/Caterina-LeoEc.hex
+leophi.bootloader.unlock_bits=0x3F
+leophi.bootloader.lock_bits=0x2F
+
+leophi.build.mcu=atmega32u4
+leophi.build.f_cpu=16000000L
+leophi.build.vid=0x0DA0
+leophi.build.pid=0x8017
+leophi.build.usb_product="LeoeC USB eC"
+leophi.build.board=AVR_LEOEC
+leophi.build.core=arduino
+leophi.build.variant=leoec
+leophi.build.extra_flags={build.usb_flags}
+
+##############################################################
+
 yun.name=Arduino Yún
 yun.upload.via_ssh=true
 
