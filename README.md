@@ -1,6 +1,14 @@
 Arduino
 ========
 
+* :warning: Just a heads up this is a branch by Ryan from SparkysWidgets
+That I regularly update to support my Leo line of Water Quality Check series
+of sensors. A very special thanks to those that support the Arduino Community!!
+The usual suspects(Massimo, DC, Mellis, Sparkfun, Limor/Adafruit, etc.) and all the others
+Paul of teensy, The hoard of people that commit fixes to the Repo,the many Forum users 
+that are endlessly providing help, to all the kit-ers and small makers etc. that strive to make
+it all work! :warning:
+
 * Arduino is an open-source physical computing platform based on a simple i/o
 board and a development environment that implements the Processing/Wiring
 language. Arduino can be used to develop stand-alone interactive objects or
