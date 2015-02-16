@@ -11,10 +11,6 @@ esplora.bootloader.name="Arduino Esplora bootloader"
 esplora.sketch.name="Arduino Esplora"
 leonardo.bootloader.name="Arduino Leonardo bootloader"
 leonardo.sketch.name="Arduino Leonardo"
-leophi.bootloader.name="LeoPhibootloader"
-leophi.sketch.name="LeoPhi USB pH"
-leoec.bootloader.name="LeoEc bootloader"
-leoec.sketch.name="LeoEc USB eC"
 lilypadUSB.bootloader.name="Arduino LilyPad USB bootloader"
 lilypadUSB.sketch.name="Arduino LilyPad USB"
 mega2560.name="Arduino Mega 2560"
@@ -30,6 +26,8 @@ robotControl.bootloader.name="Arduino Robot Control bootloader"
 robotControl.sketch.name="Arduino Robot"
 robotMotor.bootloader.name="Arduino Robot Motor bootloader"
 robotMotor.sketch.name="Arduino Robot"
+yun.bootloader.name="Arduino Yun bootloader"
+yun.sketch.name="Arduino Yun"
 
 [DefaultInstall]
 CopyINF=arduino.inf
@@ -41,7 +39,7 @@ Signature="$Windows NT$"
 Provider=%ManufacturerName%
 DriverPackageDisplayName=%DriverPackageDisplayName%
 CatalogFile=arduino.cat
-DriverVer=01/01/2013,1.0.0.0
+DriverVer=01/04/2013,1.0.0.0
 
 [Manufacturer]
 %ManufacturerName%=DeviceList, NTamd64, NTia64
@@ -58,10 +56,6 @@ DefaultDestDir=12
 %esplora.sketch.name%=DriverInstall, USB\VID_2341&PID_803C&MI_00
 %leonardo.bootloader.name%=DriverInstall, USB\VID_2341&PID_0036
 %leonardo.sketch.name%=DriverInstall, USB\VID_2341&PID_8036&MI_00
-%leophi.bootloader.name%=DriverInstall, USB\VID_1D50&PID_0016
-%leophi.sketch.name%=DriverInstall, USB\VID_1D50&PID_6016&MI_00
-%leoec.bootloader.name%=DriverInstall, USB\VID_0DA0&PID_0017
-%leoec.sketch.name%=DriverInstall, USB\VID_0DA0&PID_6017&MI_00
 %lilypadUSB.bootloader.name%=DriverInstall, USB\VID_1B4F&PID_9207
 %lilypadUSB.sketch.name%=DriverInstall, USB\VID_1B4F&PID_9208&MI_00
 %mega2560rev3.name%=DriverInstall, USB\VID_2341&PID_0042
@@ -77,6 +71,8 @@ DefaultDestDir=12
 %robotControl.sketch.name%=DriverInstall, USB\VID_2341&PID_8038&MI_00
 %robotMotor.bootloader.name%=DriverInstall, USB\VID_2341&PID_0039
 %robotMotor.sketch.name%=DriverInstall, USB\VID_2341&PID_8039&MI_00
+%yun.bootloader.name%=DriverInstall, USB\VID_2341&PID_0041
+%yun.sketch.name%=DriverInstall, USB\VID_2341&PID_8041&MI_00
 
 [DeviceList.NTamd64]
 %due.bossa.name%=DriverInstall, USB\VID_03EB&PID_6124
@@ -86,10 +82,6 @@ DefaultDestDir=12
 %esplora.sketch.name%=DriverInstall, USB\VID_2341&PID_803C&MI_00
 %leonardo.bootloader.name%=DriverInstall, USB\VID_2341&PID_0036
 %leonardo.sketch.name%=DriverInstall, USB\VID_2341&PID_8036&MI_00
-%leophi.bootloader.name%=DriverInstall, USB\VID_1D50&PID_0016
-%leophi.sketch.name%=DriverInstall, USB\VID_1D50&PID_6016&MI_00
-%leoec.bootloader.name%=DriverInstall, USB\VID_0DA0&PID_0017
-%leoec.sketch.name%=DriverInstall, USB\VID_0DA0&PID_6017&MI_00
 %lilypadUSB.bootloader.name%=DriverInstall, USB\VID_1B4F&PID_9207
 %lilypadUSB.sketch.name%=DriverInstall, USB\VID_1B4F&PID_9208&MI_00
 %mega2560rev3.name%=DriverInstall, USB\VID_2341&PID_0042
@@ -105,16 +97,14 @@ DefaultDestDir=12
 %robotControl.sketch.name%=DriverInstall, USB\VID_2341&PID_8038&MI_00
 %robotMotor.bootloader.name%=DriverInstall, USB\VID_2341&PID_0039
 %robotMotor.sketch.name%=DriverInstall, USB\VID_2341&PID_8039&MI_00
+%yun.bootloader.name%=DriverInstall, USB\VID_2341&PID_0041
+%yun.sketch.name%=DriverInstall, USB\VID_2341&PID_8041&MI_00
 
 [DeviceList.NTia64]
 %esplora.bootloader.name%=DriverInstall, USB\VID_2341&PID_003C
 %esplora.sketch.name%=DriverInstall, USB\VID_2341&PID_803C&MI_00
 %leonardo.bootloader.name%=DriverInstall, USB\VID_2341&PID_0036
 %leonardo.sketch.name%=DriverInstall, USB\VID_2341&PID_8036&MI_00
-%leophi.bootloader.name%=DriverInstall, USB\VID_1D50&PID_0016
-%leophi.sketch.name%=DriverInstall, USB\VID_1D50&PID_6016&MI_00
-%leoec.bootloader.name%=DriverInstall, USB\VID_0DA0&PID_0017
-%leoec.sketch.name%=DriverInstall, USB\VID_0DA0&PID_6017&MI_00
 %lilypadUSB.bootloader.name%=DriverInstall, USB\VID_1B4F&PID_9207
 %lilypadUSB.sketch.name%=DriverInstall, USB\VID_1B4F&PID_9208&MI_00
 %mega2560rev3.name%=DriverInstall, USB\VID_2341&PID_0042
@@ -130,6 +120,8 @@ DefaultDestDir=12
 %robotControl.sketch.name%=DriverInstall, USB\VID_2341&PID_8038&MI_00
 %robotMotor.bootloader.name%=DriverInstall, USB\VID_2341&PID_0039
 %robotMotor.sketch.name%=DriverInstall, USB\VID_2341&PID_8039&MI_00
+%yun.bootloader.name%=DriverInstall, USB\VID_2341&PID_0041
+%yun.sketch.name%=DriverInstall, USB\VID_2341&PID_8041&MI_00
 
 [DriverInstall]
 include=mdmcpq.inf,usb.inf
