@@ -38,37 +38,37 @@ leophi.build.extra_flags={build.usb_flags}
 
 ##############################################################
 
-leophi.name=Leoec
-leophi.vid.0=0x0DA0
-leophi.pid.0=0x6017
-leophi.vid.1=0x0DA0
-leophi.pid.1=0x8017
-leophi.upload.tool=avrdude
-leophi.upload.protocol=avr109
-leophi.upload.maximum_size=28672
-leophi.upload.maximum_data_size=2560
-leophi.upload.speed=57600
-leophi.upload.disable_flushing=true
-leophi.upload.use_1200bps_touch=true
-leophi.upload.wait_for_upload_port=true
+Leoec.name=Leoec
+Leoec.vid.0=0x0DA0
+Leoec.pid.0=0x6017
+Leoec.vid.1=0x0DA0
+Leoec.pid.1=0x8017
+Leoec.upload.tool=avrdude
+Leoec.upload.protocol=avr109
+Leoec.upload.maximum_size=28672
+Leoec.upload.maximum_data_size=2560
+Leoec.upload.speed=57600
+Leoec.upload.disable_flushing=true
+Leoec.upload.use_1200bps_touch=true
+Leoec.upload.wait_for_upload_port=true
 
-leophi.bootloader.tool=avrdude
-leophi.bootloader.low_fuses=0xff
-leophi.bootloader.high_fuses=0xd8
-leophi.bootloader.extended_fuses=0xcb
-leophi.bootloader.file=caterina-LeoEc/Caterina-LeoEc.hex
-leophi.bootloader.unlock_bits=0x3F
-leophi.bootloader.lock_bits=0x2F
+Leoec.bootloader.tool=avrdude
+Leoec.bootloader.low_fuses=0xff
+Leoec.bootloader.high_fuses=0xd8
+Leoec.bootloader.extended_fuses=0xcb
+Leoec.bootloader.file=caterina-LeoEc/Caterina-LeoEc.hex
+Leoec.bootloader.unlock_bits=0x3F
+Leoec.bootloader.lock_bits=0x2F
 
-leophi.build.mcu=atmega32u4
-leophi.build.f_cpu=16000000L
-leophi.build.vid=0x0DA0
-leophi.build.pid=0x8017
-leophi.build.usb_product="LeoeC USB eC"
-leophi.build.board=AVR_LEOEC
-leophi.build.core=arduino
-leophi.build.variant=leoec
-leophi.build.extra_flags={build.usb_flags}
+Leoec.build.mcu=atmega32u4
+Leoec.build.f_cpu=16000000L
+Leoec.build.vid=0x0DA0
+Leoec.build.pid=0x8017
+Leoec.build.usb_product="LeoeC USB eC"
+Leoec.build.board=AVR_LEOEC
+Leoec.build.core=arduino
+Leoec.build.variant=leoec
+Leoec.build.extra_flags={build.usb_flags}
 
 ##############################################################
 
