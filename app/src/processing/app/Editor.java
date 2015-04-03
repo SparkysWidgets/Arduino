@@ -24,8 +24,11 @@ package processing.app;
 
 import cc.arduino.packages.MonitorFactory;
 
+import cc.arduino.view.*;
+import cc.arduino.view.Event;
+import cc.arduino.view.EventListener;
 import com.jcraft.jsch.JSchException;
-
+import jssc.SerialPortException;
 import processing.app.debug.*;
 import processing.app.forms.PasswordAuthorizationDialog;
 import processing.app.helpers.OSUtils;
@@ -105,10 +108,6 @@ public class Editor extends JFrame implements RunnerListener {
   static JMenu examplesMenu;
   static JMenu importMenu;
 
-  // these menus are shared so that the board and serial port selections
-  // are the same for all windows (since the board and serial port that are
-  // actually used are determined by the preferences, which are shared)
-  static List<JMenu> boardsMenus;
   static JMenu serialMenu;
 
   static AbstractMonitor serialMonitor;
@@ -184,14 +183,13 @@ public class Editor extends JFrame implements RunnerListener {
     // When bringing a window to front, let the Base know
     addWindowListener(new WindowAdapter() {
         public void windowActivated(WindowEvent e) {
-//          System.err.println("activate");  // not coming through
           base.handleActivated(Editor.this);
           // re-add the sub-menus that are shared by all windows
           fileMenu.insert(sketchbookMenu, 2);
           fileMenu.insert(examplesMenu, 3);
-          sketchMenu.insert(importMenu, 4);
+          buildSketchMenu();
           int offset = 0;
-          for (JMenu menu : boardsMenus) {
+          for (JMenu menu : base.getBoardsCustomMenus()) {
             toolsMenu.insert(menu, numTools + offset);
             offset++;
           }
@@ -201,12 +199,20 @@ public class Editor extends JFrame implements RunnerListener {
         // added for 1.0.5
         // http://dev.processing.org/bugs/show_bug.cgi?id=1260
         public void windowDeactivated(WindowEvent e) {
-//          System.err.println("deactivate");  // not coming through
           fileMenu.remove(sketchbookMenu);
           fileMenu.remove(examplesMenu);
-          sketchMenu.remove(importMenu);
-          for (JMenu menu : boardsMenus) {
-            toolsMenu.remove(menu);
+          buildSketchMenu();
+          List<Component> toolsMenuItemsToRemove = new LinkedList<Component>();
+          for (Component menuItem : toolsMenu.getMenuComponents()) {
+            if (menuItem instanceof JComponent) {
+              Object removeOnWindowDeactivation = ((JComponent) menuItem).getClientProperty("removeOnWindowDeactivation");
+              if (removeOnWindowDeactivation != null && Boolean.valueOf(removeOnWindowDeactivation.toString())) {
+                toolsMenuItemsToRemove.add(menuItem);
+              }
+            }
+          }
+          for (Component menuItem : toolsMenuItemsToRemove) {
+            toolsMenu.remove(menuItem);
           }
           toolsMenu.remove(serialMenu);
         }
@@ -621,10 +627,13 @@ public class Editor extends JFrame implements RunnerListener {
 
 
   protected JMenu buildSketchMenu() {
-    JMenuItem item;
-    sketchMenu = new JMenu(_("Sketch"));
+    if (sketchMenu == null) {
+      sketchMenu = new JMenu(_("Sketch"));
+    } else {
+      sketchMenu.removeAll();
+    }
 
-    item = newJMenuItem(_("Verify / Compile"), 'R');
+    JMenuItem item = newJMenuItem(_("Verify / Compile"), 'R');
     item.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           handleRun(false);
@@ -650,21 +659,21 @@ public class Editor extends JFrame implements RunnerListener {
 
     sketchMenu.addSeparator();
 
+    item = newJMenuItem(_("Show Sketch Folder"), 'K');
+    item.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Base.openFolder(sketch.getFolder());
+      }
+    });
+    sketchMenu.add(item);
+    item.setEnabled(Base.openFolderAvailable());
+
     if (importMenu == null) {
-      importMenu = new JMenu(_("Import Library..."));
+      importMenu = new JMenu(_("Include Library"));
       MenuScroller.setScrollerFor(importMenu);
       base.rebuildImportMenu(importMenu);
     }
     sketchMenu.add(importMenu);
-
-    item = newJMenuItem(_("Show Sketch Folder"), 'K');
-    item.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-          Base.openFolder(sketch.getFolder());
-        }
-      });
-    sketchMenu.add(item);
-    item.setEnabled(Base.openFolderAvailable());
 
     item = new JMenuItem(_("Add File..."));
     item.addActionListener(new ActionListener() {
@@ -680,53 +689,41 @@ public class Editor extends JFrame implements RunnerListener {
 
   protected JMenu buildToolsMenu() throws Exception {
     toolsMenu = new JMenu(_("Tools"));
-    JMenu menu = toolsMenu;
-    JMenuItem item;
 
-    addInternalTools(menu);
+    addInternalTools(toolsMenu);
 
-    item = newJMenuItemShift(_("Serial Monitor"), 'M');
+    JMenuItem item = newJMenuItemShift(_("Serial Monitor"), 'M');
     item.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           handleSerial();
         }
       });
-    menu.add(item);
+    toolsMenu.add(item);
 
-    addTools(menu, Base.getToolsFolder());
+    addTools(toolsMenu, Base.getToolsFolder());
     File sketchbookTools = new File(Base.getSketchbookFolder(), "tools");
-    addTools(menu, sketchbookTools);
+    addTools(toolsMenu, sketchbookTools);
 
-    menu.addSeparator();
+    toolsMenu.addSeparator();
 
-    numTools = menu.getItemCount();
+    numTools = toolsMenu.getItemCount();
 
     // XXX: DAM: these should probably be implemented using the Tools plugin
     // API, if possible (i.e. if it supports custom actions, etc.)
 
-    if (boardsMenus == null) {
-      boardsMenus = new LinkedList<JMenu>();
-
-      JMenu boardsMenu = new JMenu(_("Board"));
-      MenuScroller.setScrollerFor(boardsMenu);
-      Editor.boardsMenus.add(boardsMenu);
-      toolsMenu.add(boardsMenu);
-
-      base.rebuildBoardsMenu(toolsMenu, this);
-      //Debug: rebuild imports
-      importMenu.removeAll();
-      base.rebuildImportMenu(importMenu);
+    for (JMenu menu : base.getBoardsCustomMenus()) {
+      toolsMenu.add(menu);
     }
 
     if (serialMenu == null)
       serialMenu = new JMenu(_("Port"));
     populatePortMenu();
-    menu.add(serialMenu);
-    menu.addSeparator();
+    toolsMenu.add(serialMenu);
+    toolsMenu.addSeparator();
 
     JMenu programmerMenu = new JMenu(_("Programmer"));
     base.rebuildProgrammerMenu(programmerMenu);
-    menu.add(programmerMenu);
+    toolsMenu.add(programmerMenu);
 
     item = new JMenuItem(_("Burn Bootloader"));
     item.addActionListener(new ActionListener() {
@@ -734,9 +731,9 @@ public class Editor extends JFrame implements RunnerListener {
         handleBurnBootloader();
       }
     });
-    menu.add(item);
+    toolsMenu.add(item);
 
-    menu.addMenuListener(new MenuListener() {
+    toolsMenu.addMenuListener(new MenuListener() {
       public void menuCanceled(MenuEvent e) {}
       public void menuDeselected(MenuEvent e) {}
       public void menuSelected(MenuEvent e) {
@@ -745,7 +742,7 @@ public class Editor extends JFrame implements RunnerListener {
       }
     });
 
-    return menu;
+    return toolsMenu;
   }
 
 
@@ -943,15 +940,22 @@ public class Editor extends JFrame implements RunnerListener {
 
   class SerialMenuListener implements ActionListener {
 
+    private final Frame parent;
     private final String serialPort;
+    private final String warning;
 
-    public SerialMenuListener(String serialPort) {
+    public SerialMenuListener(Frame parent, String serialPort, String warning) {
+      this.parent = parent;
       this.serialPort = serialPort;
+      this.warning = warning;
     }
 
     public void actionPerformed(ActionEvent e) {
       selectSerialPort(serialPort);
       base.onBoardOrPortChange();
+      if (warning != null && !Preferences.getBoolean("uncertifiedBoardWarning_dontShowMeAgain")) {
+        SwingUtilities.invokeLater(new ShowUncertifiedBoardWarning(parent));
+      }
     }
 
   }
@@ -1033,7 +1037,7 @@ public class Editor extends JFrame implements RunnerListener {
       String label = port.getLabel();
 
       JCheckBoxMenuItem item = new JCheckBoxMenuItem(label, address.equals(selectedPort));
-      item.addActionListener(new SerialMenuListener(address));
+      item.addActionListener(new SerialMenuListener(this, address, port.getPrefs().get("warning")));
       serialMenu.add(item);
     }
 
@@ -1086,34 +1090,78 @@ public class Editor extends JFrame implements RunnerListener {
     item = new JMenuItem(_("Getting Started"));
     item.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-          Base.showGettingStarted();
+          Base.showArduinoGettingStarted();
         }
       });
     menu.add(item);
 
     item = new JMenuItem(_("Environment"));
     item.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-          Base.showEnvironment();
-        }
-      });
+      public void actionPerformed(ActionEvent e) {
+        Base.showEnvironment();
+      }
+    });
     menu.add(item);
 
     item = new JMenuItem(_("Troubleshooting"));
     item.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-          Base.showTroubleshooting();
-        }
-      });
+      public void actionPerformed(ActionEvent e) {
+        Base.showTroubleshooting();
+      }
+    });
     menu.add(item);
 
     item = new JMenuItem(_("Reference"));
     item.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-          Base.showReference();
-        }
-      });
+      public void actionPerformed(ActionEvent e) {
+        Base.showReference();
+      }
+    });
     menu.add(item);
+
+    menu.addSeparator();
+
+    item = new JMenuItem(_("Galileo Help"));
+    item.setEnabled(false);
+    menu.add(item);
+
+    item = new JMenuItem(_("Getting Started"));
+    item.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Base.showReference("reference/Galileo_help_files", "ArduinoIDE_guide_galileo");
+      }
+    });
+    menu.add(item);
+    item = new JMenuItem(_("Troubleshooting"));
+    item.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Base.showReference("reference/Galileo_help_files", "Guide_Troubleshooting_Galileo");;
+      }
+    });
+    menu.add(item);
+
+    menu.addSeparator();
+
+    item = new JMenuItem(_("Edison Help"));
+    item.setEnabled(false);
+    menu.add(item);
+
+    item = new JMenuItem(_("Getting Started"));
+    item.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Base.showReference("reference/Edison_help_files", "ArduinoIDE_guide_edison");
+      }
+    });
+    menu.add(item);
+    item = new JMenuItem(_("Troubleshooting"));
+    item.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Base.showReference("reference/Edison_help_files", "Guide_Troubleshooting_Edison");;
+      }
+    });
+    menu.add(item);
+
+    menu.addSeparator();
 
     item = newJMenuItemShift(_("Find in Reference"), 'F');
     item.addActionListener(new ActionListener() {
@@ -1275,6 +1323,7 @@ public class Editor extends JFrame implements RunnerListener {
           }
           if (getSelectedText()!= null) find.setFindText( getSelectedText() );
           //new FindReplace(Editor.this).show();
+          find.setLocationRelativeTo(Editor.this);
           find.setVisible(true);
           //find.setVisible(true);
         }
@@ -1309,6 +1358,7 @@ public class Editor extends JFrame implements RunnerListener {
           if (find == null) {
             find = new FindReplace(Editor.this);
           }
+          find.setLocationRelativeTo(Editor.this);
           find.setFindText( getSelectedText() );
         }
       });
@@ -1364,6 +1414,7 @@ public class Editor extends JFrame implements RunnerListener {
     public void actionPerformed(ActionEvent e) {
       try {
         undo.undo();
+        sketch.setModified(true);
       } catch (CannotUndoException ex) {
         //System.out.println("Unable to undo: " + ex);
         //ex.printStackTrace();
@@ -1385,17 +1436,11 @@ public class Editor extends JFrame implements RunnerListener {
         undoItem.setEnabled(true);
         undoItem.setText(undo.getUndoPresentationName());
         putValue(Action.NAME, undo.getUndoPresentationName());
-        if (sketch != null) {
-          sketch.setModified(true);  // 0107
-        }
       } else {
         this.setEnabled(false);
         undoItem.setEnabled(false);
         undoItem.setText(_("Undo"));
         putValue(Action.NAME, "Undo");
-        if (sketch != null) {
-          sketch.setModified(false);  // 0107
-        }
       }
     }
   }
@@ -1410,6 +1455,7 @@ public class Editor extends JFrame implements RunnerListener {
     public void actionPerformed(ActionEvent e) {
       try {
         undo.redo();
+        sketch.setModified(true);
       } catch (CannotRedoException ex) {
         //System.out.println("Unable to redo: " + ex);
         //ex.printStackTrace();
@@ -1696,10 +1742,12 @@ public class Editor extends JFrame implements RunnerListener {
       document.addUndoableEditListener(new UndoableEditListener() {
         public void undoableEditHappened(UndoableEditEvent e) {
           if (compoundEdit != null) {
-            compoundEdit.addEdit(e.getEdit());
-
+            compoundEdit.addEdit(new CaretAwareUndoableEdit(e.getEdit(), textarea));
           } else if (undo != null) {
             undo.addEdit(new CaretAwareUndoableEdit(e.getEdit(), textarea));
+          }
+          if (compoundEdit != null || undo != null) {
+            sketch.setModified(true);
             undoAction.updateUndoState();
             redoAction.updateRedoState();
           }
@@ -2211,7 +2259,7 @@ public class Editor extends JFrame implements RunnerListener {
           // copy the sketch inside
           File properPdeFile = new File(properFolder, sketchFile.getName());
           try {
-            Base.copyFile(file, properPdeFile);
+            Base.copyFile(sketchFile, properPdeFile);
           } catch (IOException e) {
             Base.showWarning(_("Error"), _("Could not copy to a proper location."), e);
             return false;
@@ -2572,6 +2620,12 @@ public class Editor extends JFrame implements RunnerListener {
         statusError(_("Unable to connect: is the sketch using the bridge?"));
       } catch (JSchException e) {
         statusError(_("Unable to connect: wrong password?"));
+      } catch (SerialException e) {
+        String errorMessage = e.getMessage();
+        if (e.getCause() != null && e.getCause() instanceof SerialPortException) {
+          errorMessage += " (" + ((SerialPortException) e.getCause()).getExceptionType() + ")";
+        }
+        statusError(errorMessage);
       } catch (Exception e) {
         statusError(e);
       } finally {
@@ -2752,11 +2806,13 @@ public class Editor extends JFrame implements RunnerListener {
 
   protected void onBoardOrPortChange() {
     Map<String, String> boardPreferences = Base.getBoardPreferences();
-    lineStatus.setBoardName(boardPreferences.get("name"));
+    if (boardPreferences != null)
+      lineStatus.setBoardName(boardPreferences.get("name"));
+    else
+      lineStatus.setBoardName("-");
     lineStatus.setSerialPort(Preferences.get("serial.port"));
     lineStatus.repaint();
   }
-
 
   /**
    * Returns the edit popup menu.
